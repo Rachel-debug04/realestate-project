@@ -14,35 +14,37 @@ const ELLEN_AVATAR = 'https://images.unsplash.com/photo-1494790108377-be9c29b293
 export default function EllenPage() {
   const navigate = useNavigate();
   const location = useLocation();
-  const serviceType = location.state?.serviceType || 'default';
+  const serviceType = location.state?.serviceType || 'purchase';
+  const preCollectedData = location.state?.userData || null;
   
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
-  const [stage, setStage] = useState('greeting');
-  const [userData, setUserData] = useState({ firstName: '', lastName: '', email: '' });
+  const [userData, setUserData] = useState(preCollectedData || { firstName: '', lastName: '' });
   const [sessionId, setSessionId] = useState(null);
   const messagesEndRef = useRef(null);
 
   useEffect(() => {
-    // Load existing session or start new
-    const guestSession = localStorage.getItem('ellen_guest_session');
-    if (guestSession) {
-      const session = JSON.parse(guestSession);
-      if (session.serviceType === serviceType) {
-        setSessionId(session.sessionId);
-        setUserData(session.userData);
-        setMessages(session.messages);
-        setStage(session.stage);
-        return;
-      }
+    // Redirect to pre-chat if no data collected
+    if (!preCollectedData || !preCollectedData.firstName) {
+      navigate('/prechat', { state: { serviceType } });
+      return;
     }
     
-    // Initialize new chat
-    const greeting = getGreeting(serviceType);
-    setMessages([{ role: 'assistant', content: greeting, timestamp: new Date() }]);
-    setStage('name_collection');
-  }, [serviceType]);
+    // Clear previous session for this service
+    const storageKey = `ellen_session_${serviceType}`;
+    const existingSession = localStorage.getItem(storageKey);
+    
+    if (existingSession) {
+      const session = JSON.parse(existingSession);
+      setSessionId(session.sessionId);
+      setMessages(session.messages);
+    } else {
+      // Initialize new chat with greeting
+      const greeting = getGreeting(serviceType, preCollectedData.firstName);
+      setMessages([{ role: 'assistant', content: greeting, timestamp: new Date() }]);
+    }
+  }, [serviceType, preCollectedData, navigate]);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
