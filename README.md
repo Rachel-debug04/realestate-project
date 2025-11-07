@@ -4,9 +4,17 @@
 
 MortsGage is a production-grade, AI-powered mortgage platform with a Lemonade-style conversational experience. Meet Ellen, your friendly mortgage guide who makes home loans simple, transparent, and stress-free. Built with modern fintech security and compliance standards.
 
-## 🌟 Latest Update: Lemonade-Style Transformation
+## 🌟 Latest Updates: Complete Lemonade-Style Experience
 
-The platform now features a **public landing page** inspired by Lemonade.com with **Ellen**, the conversational AI mortgage guide. Users can explore and interact before creating an account!
+The platform now features a **public landing page** inspired by Lemonade.com with **Ellen**, the conversational AI mortgage guide. Ellen appears on her own dedicated page with a professional avatar, making the experience more personal and engaging.
+
+### Recent Improvements (Latest)
+✅ **Fixed Navigation** - Resolved text overlap with clean 3-column grid layout  
+✅ **Interactive Animations** - Landing page features smooth animations, floating elements, and hover effects  
+✅ **Full-Page Ellen** - Ellen now opens on dedicated page (/ellen) instead of modal overlay  
+✅ **Ellen's Picture** - Professional woman avatar (late 20s-30s) appears with every message  
+✅ **Dashboard Updates** - All "AI Advisor" references changed to "Talk to Ellen"  
+✅ **Improved Layout** - Consistent spacing, alignment, and visual hierarchy throughout
 
 ## 🎯 Features Delivered
 
