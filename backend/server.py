@@ -502,6 +502,28 @@ async def get_documents(current_user: User = Depends(get_current_user)):
     documents = await db.documents.find({"user_id": current_user.id}, {"_id": 0}).to_list(100)
     return documents
 
+# Guest Chat Route (no authentication required)
+@api_router.post("/chat/guest", response_model=ChatResponse)
+async def send_guest_chat_message(chat_req: ChatRequest):
+    session_id = chat_req.session_id or str(uuid.uuid4())
+    
+    # Get AI response (use guest user context)
+    ai_result = await get_ai_response(chat_req.message, session_id, "guest", chat_req.use_primary)
+    
+    # Generate suggestions based on intent
+    suggestions = []
+    if ai_result["intent"] == "getQuote":
+        suggestions = ["Calculate pre-qualification", "View mortgage products", "Start application"]
+    elif ai_result["intent"] == "preQual":
+        suggestions = ["Start pre-qualification", "Upload documents", "Talk to an advisor"]
+    
+    return ChatResponse(
+        message=ai_result["response"],
+        session_id=session_id,
+        intent=ai_result["intent"],
+        suggestions=suggestions
+    )
+
 # Chat Routes
 @api_router.post("/chat/message", response_model=ChatResponse)
 async def send_chat_message(chat_req: ChatRequest, current_user: User = Depends(get_current_user)):
