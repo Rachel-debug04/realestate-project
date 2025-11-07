@@ -249,18 +249,12 @@ export default function EllenPage() {
 
         {/* Input Area */}
         <div className="bg-white rounded-3xl shadow-lg border border-[#E5E7EB] p-6">
-          {stage === 'name_collection' && (
-            <div className="mb-4 p-4 bg-[#E8F4F8] rounded-lg">
-              <p className="text-sm text-[#0F4C81] mb-2">Let's start with your name:</p>
-              <p className="text-xs text-[#667085]">Example: John Smith</p>
-            </div>
-          )}
           <div className="flex space-x-4">
             <Input
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyPress={(e) => e.key === 'Enter' && handleSend()}
-              placeholder={stage === 'name_collection' ? 'Enter your first and last name...' : 'Type your message...'}
+              placeholder="Type your message..."
               className="flex-1 h-14 border-[#E5E7EB] focus:border-[#0F4C81] text-base"
               disabled={loading}
               data-testid="ellen-chat-input"
