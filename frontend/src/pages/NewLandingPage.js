@@ -232,7 +232,7 @@ export default function NewLandingPage() {
           </p>
           <Button
             size="lg"
-            onClick={() => openChat('default')}
+            onClick={() => navigate('/ellen', { state: { serviceType: 'default' } })}
             className="bg-white text-[#0F4C81] hover:bg-[#F8F9FA] rounded-full px-12 text-lg h-16"
             data-testid="footer-cta"
           >
