@@ -74,18 +74,6 @@ export default function EllenPage() {
     return greetings[service] || greetings.default;
   };
 
-  const getServiceQuestion = (service) => {
-    const questions = {
-      homeowners: "Can I ask where your new home is located?",
-      'first-time': "Is this your first home purchase? What type of property are you looking at?",
-      refinance: "Are you hoping to lower your monthly payments or shorten your loan term?",
-      investment: "Is this a personal or business investment? What's your budget range?",
-      compare: "What loan amount are you considering?",
-      default: "What brings you here today? Are you looking to buy, refinance, or just explore options?"
-    };
-    return questions[service] || questions.default;
-  };
-
   const handleSend = async () => {
     if (!input.trim() || loading) return;
 
@@ -95,34 +83,11 @@ export default function EllenPage() {
     setLoading(true);
 
     try {
-      if (stage === 'name_collection') {
-        handleNameCollection(userMessage);
-      } else if (stage === 'conversation') {
-        await handleConversation(userMessage);
-      }
+      await handleConversation(userMessage);
     } catch (error) {
       console.error('Chat error:', error);
     } finally {
       setLoading(false);
-    }
-  };
-
-  const handleNameCollection = (message) => {
-    const names = message.trim().split(/\\s+/);
-    if (names.length >= 2) {
-      const firstName = names[0];
-      const lastName = names.slice(1).join(' ');
-      setUserData(prev => ({ ...prev, firstName, lastName }));
-      
-      const response = `Nice to meet you, ${firstName}! ${getServiceQuestion(serviceType)}`;
-      setMessages(prev => [...prev, { role: 'assistant', content: response, timestamp: new Date() }]);
-      setStage('conversation');
-    } else {
-      setMessages(prev => [...prev, { 
-        role: 'assistant', 
-        content: "Could you share both your first and last name? For example: 'John Smith'", 
-        timestamp: new Date() 
-      }]);
     }
   };
 
