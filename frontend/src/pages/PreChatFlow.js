@@ -165,6 +165,16 @@ export default function PreChatFlow() {
       {/* Main Content */}
       <div className="flex-1 flex items-center justify-center py-12 px-4">
         <div className="max-w-2xl w-full">
+          {/* Ellen's Avatar - Always Visible */}
+          <div className="text-center mb-8 animate-fadeIn">
+            <img
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=faces"
+              alt="Ellen - Your Mortgage Guide"
+              className="w-20 h-20 rounded-full mx-auto mb-3 border-4 border-[#A9CCE3] shadow-lg"
+            />
+            <p className="text-sm text-[#667085]">Ellen, your mortgage guide</p>
+          </div>
+
           {/* Step 1: Name Collection */}
           {step === 1 && (
             <div className="bg-white rounded-3xl shadow-lg border border-[#E5E7EB] p-8 md:p-12 animate-fadeIn" data-testid="step-name">
