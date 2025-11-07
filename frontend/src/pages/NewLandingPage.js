@@ -63,14 +63,14 @@ export default function NewLandingPage() {
       {/* Navigation */}
       <nav className="sticky top-0 bg-white/95 backdrop-blur-lg border-b border-[#E5E7EB] z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
+          <div className="grid grid-cols-3 items-center h-16 gap-4">
             {/* Left - Service Links */}
-            <div className="hidden lg:flex items-center space-x-8">
-              {services.map((service) => (
+            <div className="hidden lg:flex items-center space-x-4 xl:space-x-6 justify-start">
+              {services.slice(0, 3).map((service) => (
                 <button
                   key={service.id}
-                  onClick={() => service.id === 'learn' ? navigate('/products') : openChat(service.id)}
-                  className="text-[#667085] hover:text-[#0F4C81] font-medium transition-colors duration-200"
+                  onClick={() => service.id === 'learn' ? navigate('/products') : navigate('/ellen', { state: { serviceType: service.id } })}
+                  className="text-sm text-[#667085] hover:text-[#0F4C81] font-medium transition-colors duration-200 whitespace-nowrap"
                   data-testid={`nav-${service.id}`}
                 >
                   {service.title}
@@ -79,28 +79,28 @@ export default function NewLandingPage() {
             </div>
 
             {/* Center - Logo */}
-            <div className="flex items-center space-x-2 lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2">
-              <div className="w-10 h-10 bg-[#0F4C81] rounded-lg flex items-center justify-center">
+            <div className="flex items-center space-x-2 justify-center">
+              <div className="w-10 h-10 bg-[#0F4C81] rounded-lg flex items-center justify-center flex-shrink-0">
                 <span className="text-white font-bold text-xl">M</span>
               </div>
-              <span className="text-2xl font-bold text-[#0F4C81]" style={{ fontFamily: 'Space Grotesk' }}>
+              <span className="text-xl lg:text-2xl font-bold text-[#0F4C81] whitespace-nowrap" style={{ fontFamily: 'Space Grotesk' }}>
                 MortsGage
               </span>
             </div>
 
             {/* Right - Auth Buttons */}
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-3 justify-end">
               <Button 
                 variant="ghost" 
                 onClick={() => navigate('/login')} 
-                className="text-[#0F4C81]"
+                className="text-[#0F4C81] text-sm"
                 data-testid="nav-login-btn"
               >
                 Log In
               </Button>
               <Button 
                 onClick={() => navigate('/signup')} 
-                className="bg-[#0F4C81] hover:bg-[#0A3A61] text-white rounded-full"
+                className="bg-[#0F4C81] hover:bg-[#0A3A61] text-white rounded-full text-sm px-4"
                 data-testid="nav-signup-btn"
               >
                 Get Started
