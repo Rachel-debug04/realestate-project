@@ -91,7 +91,7 @@ export default function DashboardPage() {
             data-testid="quick-action-advisor"
           >
             <MessageSquare className="h-8 w-8" />
-            <span className="text-lg font-semibold">Talk to AI Advisor</span>
+            <span className="text-lg font-semibold">Talk to Ellen</span>
           </Button>
 
           <Button
