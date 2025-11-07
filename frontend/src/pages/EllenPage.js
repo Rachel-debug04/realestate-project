@@ -62,14 +62,14 @@ export default function EllenPage() {
     }
   }, [messages, sessionId, serviceType]);
 
-  const getGreeting = (service) => {
+  const getGreeting = (service, firstName) => {
     const greetings = {
-      homeowners: "Hi, I'm Ellen — your friendly mortgage guide 😊 Ready to find your best fit for your new home?",
-      'first-time': "Hi, I'm Ellen! 😊 So exciting that you're looking to buy your first home. Let me help make this easy!",
-      refinance: "Hey there! I'm Ellen 😊 Looking to refinance? I'll help you find the best option.",
-      investment: "Hi, I'm Ellen! 😊 Investing in property? Smart move. Let's find you the right mortgage.",
-      compare: "Hi, I'm Ellen! 😊 Want to compare rates? I'll help you find the best deals.",
-      default: "Hi, I'm Ellen — your friendly mortgage guide 😊 Ready to find your best fit?"
+      purchase: `Hi ${firstName}! 😊 I'm Ellen, your mortgage guide. I see you're looking to purchase a new home. I'll help you find the best rates and loan options. What's your budget range?`,
+      refinance: `Hey ${firstName}! 😊 I'm Ellen. You're looking to refinance - smart move! Tell me about your current mortgage. What's your main goal: lower monthly payments or a shorter loan term?`,
+      investment: `Hi ${firstName}! 😊 I'm Ellen. Investing in property is exciting! What type of investment property are you considering, and do you have expected rental income in mind?`,
+      'home-equity': `Hey ${firstName}! 😊 I'm Ellen. Home equity loans can be great for accessing your home's value. What's the purpose of this loan, and how much equity do you think you have?`,
+      calculator: `Hi ${firstName}! 😊 I'm Ellen. Let me help you calculate mortgage rates. What loan amount are you considering?`,
+      default: `Hi ${firstName}! 😊 I'm Ellen, your mortgage guide. How can I help you today?`
     };
     return greetings[service] || greetings.default;
   };
