@@ -115,7 +115,7 @@ export default function NewLandingPage() {
           </p>
           <Button
             size="lg"
-            onClick={() => navigate('/ellen', { state: { serviceType: 'default' } })}
+            onClick={() => navigate('/prechat', { state: { serviceType: 'purchase' } })}
             className="bg-gradient-to-r from-[#0F4C81] to-[#2A6F9E] hover:from-[#0A3A61] hover:to-[#1F5580] text-white rounded-full px-12 text-lg h-16 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fadeIn"
             style={{ animationDelay: '0.4s' }}
             data-testid="check-rates-cta"
