@@ -57,7 +57,7 @@ export default function NewLandingPage() {
               {services.slice(0, 3).map((service) => (
                 <button
                   key={service.id}
-                  onClick={() => service.id === 'learn' ? navigate('/products') : navigate('/ellen', { state: { serviceType: service.id } })}
+                  onClick={() => service.id === 'learn' ? navigate('/products') : navigate('/prechat', { state: { serviceType: service.id } })}
                   className="text-sm text-[#667085] hover:text-[#0F4C81] font-medium transition-colors duration-200 whitespace-nowrap"
                   data-testid={`nav-${service.id}`}
                 >
