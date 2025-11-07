@@ -1,14 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Home, TrendingUp, DollarSign, Building, BarChart3, BookOpen } from 'lucide-react';
-import EllenChat from '@/components/EllenChat';
 import Footer from '@/components/Footer';
 
 export default function NewLandingPage() {
   const navigate = useNavigate();
-  const [chatOpen, setChatOpen] = useState(false);
-  const [selectedService, setSelectedService] = useState(null);
 
   const services = [
     { 
