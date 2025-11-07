@@ -238,25 +238,25 @@ export default function PreChatFlow() {
 
               <div className="space-y-6">
                 <div>
-                  <Label htmlFor="street" className="text-base">Street Address</Label>
+                  <Label htmlFor="street" className="text-base font-medium">Street Address</Label>
                   <Input
                     id="street"
                     value={formData.street}
                     onChange={(e) => setFormData({ ...formData, street: e.target.value })}
-                    placeholder="123 Main Street"
-                    className="mt-2 h-14 text-base"
+                    placeholder="e.g., 123 Main Street"
+                    className="mt-2 h-14 text-base placeholder:text-[#CBD5E0]"
                     autoFocus
                     data-testid="input-street"
                   />
                 </div>
                 <div>
-                  <Label htmlFor="unit" className="text-base">Unit Number (Optional)</Label>
+                  <Label htmlFor="unit" className="text-base font-medium">Unit Number (Optional)</Label>
                   <Input
                     id="unit"
                     value={formData.unit}
                     onChange={(e) => setFormData({ ...formData, unit: e.target.value })}
-                    placeholder="Apt 4B"
-                    className="mt-2 h-14 text-base"
+                    placeholder="e.g., Apt 4B"
+                    className="mt-2 h-14 text-base placeholder:text-[#CBD5E0]"
                     data-testid="input-unit"
                   />
                 </div>
