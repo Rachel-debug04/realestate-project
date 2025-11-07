@@ -51,10 +51,10 @@ export default function AdvisorPage() {
       <div className="flex-1 max-w-5xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col">
         <div className="mb-8">
           <h1 className="text-3xl sm:text-4xl font-bold text-[#0A1929] mb-4" style={{ fontFamily: 'Space Grotesk' }} data-testid="advisor-title">
-            AI Mortgage Advisor
+            Chat with Ellen
           </h1>
           <p className="text-lg text-[#667085]">
-            Ask me anything about mortgages, rates, or your application
+            Your mortgage guide - Ask me anything about mortgages, rates, or your application
           </p>
         </div>
 
