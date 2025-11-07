@@ -157,7 +157,7 @@ export default function NewLandingPage() {
             return (
               <button
                 key={service.id}
-                onClick={() => service.id === 'learn' ? navigate('/products') : navigate('/ellen', { state: { serviceType: service.id } })}
+                onClick={() => service.id === 'learn' ? navigate('/products') : navigate('/prechat', { state: { serviceType: service.id } })}
                 className="card-hover bg-white rounded-2xl p-8 shadow-md border border-[#E5E7EB] text-left hover:border-[#0F4C81] transition-all duration-300 animate-fadeIn"
                 style={{ animationDelay: `${0.1 * (services.indexOf(service) + 1)}s` }}
                 data-testid={`service-card-${service.id}`}
