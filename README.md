@@ -1,8 +1,12 @@
-# EasyMortgage - Lemonade-Inspired Mortgage Platform MVP
+# MortsGage - Lemonade-Inspired Mortgage Platform
 
 ## Overview
 
-EasyMortgage is a production-grade, AI-powered mortgage platform that makes mortgage discovery, pre-qualification, application, and lifecycle management fast, transparent, and emotionally intelligent. Built with modern fintech security and compliance standards.
+MortsGage is a production-grade, AI-powered mortgage platform with a Lemonade-style conversational experience. Meet Ellen, your friendly mortgage guide who makes home loans simple, transparent, and stress-free. Built with modern fintech security and compliance standards.
+
+## 🌟 Latest Update: Lemonade-Style Transformation
+
+The platform now features a **public landing page** inspired by Lemonade.com with **Ellen**, the conversational AI mortgage guide. Users can explore and interact before creating an account!
 
 ## 🎯 MVP Features Delivered
 
