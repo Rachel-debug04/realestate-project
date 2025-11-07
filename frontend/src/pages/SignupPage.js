@@ -46,17 +46,17 @@ export default function SignupPage() {
         <div className="bg-white rounded-2xl shadow-xl p-8 border border-[#E5E7EB]">
           <div className="text-center mb-8">
             <div className="w-14 h-14 bg-[#0F4C81] rounded-xl flex items-center justify-center mx-auto mb-4">
-              <span className="text-white font-bold text-2xl">EM</span>
+              <span className="text-white font-bold text-2xl">M</span>
             </div>
             <h2
               className="text-3xl font-bold text-[#0A1929] mb-2"
               style={{ fontFamily: 'Space Grotesk' }}
               data-testid="signup-title"
             >
-              Create Your Account
+              {fromEllen ? `Almost there, ${ellenData.firstName}!` : 'Create Your Account'}
             </h2>
             <p className="text-[#667085]">
-              Start your journey to homeownership today
+              {fromEllen ? 'Just a few more details to save your progress' : 'Start your journey to homeownership today'}
             </p>
           </div>
 
