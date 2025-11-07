@@ -112,9 +112,9 @@ export default function NewLandingPage() {
 
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
-        <div className="text-center max-w-4xl mx-auto">
+        <div className="text-center max-w-4xl mx-auto animate-fadeIn">
           <h1
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#0A1929] mb-6 leading-tight"
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#0A1929] mb-6 leading-tight animate-slideIn"
             style={{ fontFamily: 'Space Grotesk' }}
             data-testid="hero-headline"
           >
@@ -122,26 +122,35 @@ export default function NewLandingPage() {
             <br />
             <span className="text-[#0F4C81]">in Minutes.</span>
           </h1>
-          <p className="text-lg sm:text-xl text-[#667085] mb-8 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-[#667085] mb-8 max-w-2xl mx-auto animate-fadeIn" style={{ animationDelay: '0.2s' }}>
             Zero stress. Great rates. Guided by Ellen.
           </p>
           <Button
             size="lg"
-            onClick={() => openChat('default')}
-            className="bg-gradient-to-r from-[#0F4C81] to-[#2A6F9E] hover:from-[#0A3A61] hover:to-[#1F5580] text-white rounded-full px-12 text-lg h-16 shadow-lg hover:shadow-xl transition-all duration-300"
+            onClick={() => navigate('/ellen', { state: { serviceType: 'default' } })}
+            className="bg-gradient-to-r from-[#0F4C81] to-[#2A6F9E] hover:from-[#0A3A61] hover:to-[#1F5580] text-white rounded-full px-12 text-lg h-16 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fadeIn"
+            style={{ animationDelay: '0.4s' }}
             data-testid="check-rates-cta"
           >
             CHECK MY RATES
           </Button>
         </div>
 
-        {/* Illustration Placeholder */}
-        <div className="mt-16 flex justify-center">
-          <div className="w-full max-w-3xl h-64 bg-gradient-to-br from-[#E8F4F8] to-[#A9CCE3]/20 rounded-3xl flex items-center justify-center border-2 border-dashed border-[#A9CCE3]">
-            <div className="text-center">
-              <Home className="h-24 w-24 text-[#0F4C81]/30 mx-auto mb-4" />
-              <p className="text-[#667085] text-sm">[Lemonade-style illustration here]</p>
+        {/* Interactive Animated Illustration */}
+        <div className="mt-16 flex justify-center animate-fadeIn" style={{ animationDelay: '0.6s' }}>
+          <div className="w-full max-w-3xl h-64 bg-gradient-to-br from-[#E8F4F8] to-[#A9CCE3]/20 rounded-3xl flex items-center justify-center border-2 border-[#A9CCE3]/50 relative overflow-hidden group">
+            <div className="absolute inset-0 bg-gradient-to-br from-[#0F4C81]/5 to-transparent animate-pulse"></div>
+            <div className="text-center relative z-10">
+              <div className="relative inline-block">
+                <Home className="h-24 w-24 text-[#0F4C81] mx-auto mb-4 transition-all duration-500 group-hover:scale-110 group-hover:text-[#2A6F9E]" />
+                <div className="absolute -top-2 -right-2 w-6 h-6 bg-[#0F4C81] rounded-full animate-ping"></div>
+              </div>
+              <p className="text-[#0F4C81] font-medium">Your dream home awaits</p>
             </div>
+            {/* Floating elements */}
+            <div className="absolute top-8 left-8 w-4 h-4 bg-[#A9CCE3] rounded-full animate-bounce" style={{ animationDelay: '0s', animationDuration: '3s' }}></div>
+            <div className="absolute bottom-8 right-8 w-3 h-3 bg-[#2A6F9E] rounded-full animate-bounce" style={{ animationDelay: '1s', animationDuration: '2.5s' }}></div>
+            <div className="absolute top-16 right-16 w-5 h-5 bg-[#E8F4F8] rounded-full animate-bounce" style={{ animationDelay: '0.5s', animationDuration: '3.5s' }}></div>
           </div>
         </div>
       </div>
