@@ -145,12 +145,15 @@ export default function NewLandingPage() {
 
       {/* Service Cards */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h2
-          className="text-3xl sm:text-4xl font-bold text-[#0A1929] mb-12 text-center"
-          style={{ fontFamily: 'Space Grotesk' }}
-        >
-          How Can We Help You?
-        </h2>
+        <div className="text-center mb-12">
+          <h2
+            className="text-3xl sm:text-4xl font-bold text-[#0A1929] mb-3"
+            style={{ fontFamily: 'Space Grotesk' }}
+          >
+            How Can We Help You?
+          </h2>
+          <p className="text-2xl italic text-[#667085]">Mortgage</p>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.slice(0, 6).map((service) => {
             const Icon = service.icon;
