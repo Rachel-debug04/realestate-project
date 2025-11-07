@@ -189,25 +189,25 @@ export default function PreChatFlow() {
 
               <div className="space-y-6">
                 <div>
-                  <Label htmlFor="firstName" className="text-base">First Name</Label>
+                  <Label htmlFor="firstName" className="text-base font-medium">First Name</Label>
                   <Input
                     id="firstName"
                     value={formData.firstName}
                     onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                    placeholder="John"
-                    className="mt-2 h-14 text-base"
+                    placeholder="e.g., John"
+                    className="mt-2 h-14 text-base placeholder:text-[#CBD5E0]"
                     autoFocus
                     data-testid="input-firstname"
                   />
                 </div>
                 <div>
-                  <Label htmlFor="lastName" className="text-base">Last Name</Label>
+                  <Label htmlFor="lastName" className="text-base font-medium">Last Name</Label>
                   <Input
                     id="lastName"
                     value={formData.lastName}
                     onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-                    placeholder="Smith"
-                    className="mt-2 h-14 text-base"
+                    placeholder="e.g., Smith"
+                    className="mt-2 h-14 text-base placeholder:text-[#CBD5E0]"
                     data-testid="input-lastname"
                   />
                 </div>
