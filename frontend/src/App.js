@@ -40,6 +40,7 @@ function App() {
         <div className="App">
           <Routes>
             <Route path="/" element={<NewLandingPage />} />
+            <Route path="/ellen" element={<EllenPage />} />
             <Route path="/old" element={<LandingPage />} />
             <Route path="/signup" element={<SignupPage />} />
             <Route path="/login" element={<LoginPage />} />
