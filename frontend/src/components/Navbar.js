@@ -83,7 +83,7 @@ export default function Navbar() {
                 </DropdownMenuItem>
                 <DropdownMenuItem onClick={() => navigate('/advisor')} data-testid="menu-advisor">
                   <MessageSquare className="mr-2 h-4 w-4" />
-                  AI Advisor
+                  Talk to Ellen
                 </DropdownMenuItem>
                 <DropdownMenuItem onClick={() => navigate('/prequal')} data-testid="menu-prequal">
                   <CreditCard className="mr-2 h-4 w-4" />
