@@ -7,6 +7,52 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { ArrowLeft, ArrowRight, Home, Building, CheckCircle } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
 
+// Processing animation component
+function ProcessingStep({ serviceTitle, onComplete }) {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      onComplete();
+    }, 3000); // Auto-advance after 3 seconds
+    
+    return () => clearTimeout(timer);
+  }, [onComplete]);
+
+  return (
+    <div className="bg-white rounded-3xl shadow-lg border border-[#E5E7EB] p-8 md:p-12 animate-fadeIn text-center" data-testid="step-processing">
+      <div className="py-12">
+        <div className="relative inline-block mb-8">
+          <div className="w-24 h-24 bg-gradient-to-br from-[#0F4C81] to-[#2A6F9E] rounded-full flex items-center justify-center animate-pulse">
+            <CheckCircle className="h-12 w-12 text-white" />
+          </div>
+          <div className="absolute inset-0 w-24 h-24 border-4 border-[#A9CCE3] rounded-full animate-ping"></div>
+        </div>
+
+        <h1 className="text-3xl md:text-4xl font-bold text-[#0A1929] mb-4" style={{ fontFamily: 'Space Grotesk' }}>
+          Preparing Your Experience...
+        </h1>
+        <p className="text-lg text-[#667085] mb-8">
+          Connecting you with Ellen, your mortgage guide
+        </p>
+
+        <div className="space-y-3 text-left max-w-md mx-auto">
+          <div className="flex items-center space-x-3 animate-fadeIn" style={{ animationDelay: '0.5s' }}>
+            <CheckCircle className="h-5 w-5 text-[#10B981]" />
+            <span className="text-[#667085]">Property details confirmed</span>
+          </div>
+          <div className="flex items-center space-x-3 animate-fadeIn" style={{ animationDelay: '1s' }}>
+            <CheckCircle className="h-5 w-5 text-[#10B981]" />
+            <span className="text-[#667085]">Analyzing {serviceTitle}</span>
+          </div>
+          <div className="flex items-center space-x-3 animate-fadeIn" style={{ animationDelay: '1.5s' }}>
+            <CheckCircle className="h-5 w-5 text-[#10B981]" />
+            <span className="text-[#667085]">Loading Ellen...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function PreChatFlow() {
   const navigate = useNavigate();
   const location = useLocation();
