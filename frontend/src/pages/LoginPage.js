@@ -41,7 +41,7 @@ export default function LoginPage() {
         <div className="bg-white rounded-2xl shadow-xl p-8 border border-[#E5E7EB]">
           <div className="text-center mb-8">
             <div className="w-14 h-14 bg-[#0F4C81] rounded-xl flex items-center justify-center mx-auto mb-4">
-              <span className="text-white font-bold text-2xl">EM</span>
+              <span className="text-white font-bold text-2xl">M</span>
             </div>
             <h2
               className="text-3xl font-bold text-[#0A1929] mb-2"
