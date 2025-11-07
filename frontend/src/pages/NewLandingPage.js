@@ -9,40 +9,40 @@ export default function NewLandingPage() {
 
   const services = [
     { 
-      id: 'homeowners', 
-      title: 'Homeowners', 
+      id: 'purchase', 
+      title: 'Purchase a New Home', 
       icon: Home,
-      description: 'Find your dream home loan'
-    },
-    { 
-      id: 'first-time', 
-      title: 'First-Time Buyers', 
-      icon: TrendingUp,
-      description: 'Start your homeownership journey'
+      description: 'Finance your dream property with great rates'
     },
     { 
       id: 'refinance', 
-      title: 'Refinance', 
-      icon: DollarSign,
-      description: 'Lower your rate or payment'
+      title: 'Refinance Mortgage', 
+      icon: TrendingUp,
+      description: 'Lower your rate or shorten your term'
     },
     { 
       id: 'investment', 
-      title: 'Investment Properties', 
+      title: 'Investment Property Loans', 
       icon: Building,
-      description: 'Expand your portfolio'
+      description: 'Finance rental or investment properties'
     },
     { 
-      id: 'compare', 
-      title: 'Rate Compare', 
+      id: 'home-equity', 
+      title: 'Home Equity Loans', 
+      icon: DollarSign,
+      description: 'Leverage your home equity for cash'
+    },
+    { 
+      id: 'calculator', 
+      title: 'Mortgage Calculator', 
       icon: BarChart3,
-      description: 'See the best rates'
+      description: 'Get quick rate estimates'
     },
     { 
       id: 'learn', 
       title: 'Learn', 
       icon: BookOpen,
-      description: 'Mortgage education'
+      description: 'Mortgage education and guides'
     }
   ];
 
