@@ -7,6 +7,7 @@ import { Toaster } from '@/components/ui/sonner';
 import { AuthProvider, useAuth } from '@/context/AuthContext';
 
 // Pages
+import NewLandingPage from '@/pages/NewLandingPage';
 import LandingPage from '@/pages/LandingPage';
 import SignupPage from '@/pages/SignupPage';
 import LoginPage from '@/pages/LoginPage';
