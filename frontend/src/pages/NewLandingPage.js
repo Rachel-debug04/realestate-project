@@ -46,15 +46,6 @@ export default function NewLandingPage() {
     }
   ];
 
-  const openChat = (serviceId) => {
-    setSelectedService(serviceId);
-    setChatOpen(true);
-  };
-
-  const handleSignupPrompt = (userData) => {
-    navigate('/signup', { state: { fromEllen: true, userData } });
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#F8F9FA] to-white">
       {/* Navigation */}
