@@ -104,7 +104,14 @@ The platform now features a **public landing page** inspired by Lemonade.com wit
 
 **Live URL**: https://easymortgage-1.preview.emergentagent.com
 
-### Test Credentials
+### Experience the Lemonade-Style Flow
+1. **Visit the Landing Page** - Explore service cards and navigation
+2. **Click Any Service Card** - Ellen appears instantly to help
+3. **Chat with Ellen** - Share your name and mortgage goals
+4. **Get Personalized Guidance** - Ellen provides context-aware assistance
+5. **Create Account When Ready** - Save progress and continue
+
+### Test Credentials (for authenticated features)
 ```
 Email: testuser@example.com
 Password: Password123!
