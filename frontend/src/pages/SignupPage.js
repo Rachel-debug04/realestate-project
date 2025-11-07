@@ -8,7 +8,11 @@ import { toast } from 'sonner';
 import { ArrowLeft, Mail, Lock, Phone } from 'lucide-react';
 
 export default function SignupPage() {
-  const [email, setEmail] = useState('');
+  const location = useLocation();
+  const fromEllen = location.state?.fromEllen;
+  const ellenData = location.state?.userData || {};
+  
+  const [email, setEmail] = useState(ellenData.email || '');
   const [password, setPassword] = useState('');
   const [phone, setPhone] = useState('');
   const [loading, setLoading] = useState(false);
