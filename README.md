@@ -8,13 +8,29 @@ MortsGage is a production-grade, AI-powered mortgage platform with a Lemonade-st
 
 The platform now features a **public landing page** inspired by Lemonade.com with **Ellen**, the conversational AI mortgage guide. Users can explore and interact before creating an account!
 
-## 🎯 MVP Features Delivered
+## 🎯 Features Delivered
 
-### Borrower Journey (Phase 1)
+### 🆕 Lemonade-Style Experience (Latest)
+- ✅ **Public Landing Page**
+  - Service navigation (Homeowners, First-Time Buyers, Refinance, Investment Properties, Rate Compare, Learn)
+  - Hero section with "Find Your Best Mortgage in Minutes"
+  - Prominent "CHECK MY RATES" CTA
+  - Beautiful service cards with icons
+  
+- ✅ **Ellen - Conversational Mortgage Guide**
+  - Friendly AI assistant appears before account creation
+  - Name collection with personalized greetings
+  - Context-aware conversations based on service type
+  - Guest chat with localStorage persistence
+  - Smooth transition to account creation when needed
+  - Powered by Claude Sonnet 4 for intelligent responses
+  
+### Borrower Journey (Core MVP)
 - ✅ **Authentication & Onboarding**
   - Email/password signup and login
   - JWT-based secure authentication
   - Progressive profile completion
+  - Seamless Ellen-to-signup flow
   
 - ✅ **AI Mortgage Advisor**
   - Powered by Claude Sonnet 4 (primary) for reasoning/explainability
