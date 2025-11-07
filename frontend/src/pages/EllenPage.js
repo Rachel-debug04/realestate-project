@@ -51,17 +51,16 @@ export default function EllenPage() {
   }, [messages]);
 
   useEffect(() => {
-    // Save session
+    // Save session per service
     if (messages.length > 0) {
-      localStorage.setItem('ellen_guest_session', JSON.stringify({
+      const storageKey = `ellen_session_${serviceType}`;
+      localStorage.setItem(storageKey, JSON.stringify({
         sessionId,
-        userData,
         messages,
-        stage,
         serviceType
       }));
     }
-  }, [messages, userData, stage, sessionId, serviceType]);
+  }, [messages, sessionId, serviceType]);
 
   const getGreeting = (service) => {
     const greetings = {
