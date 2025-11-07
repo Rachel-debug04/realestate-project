@@ -8,6 +8,7 @@ import { AuthProvider, useAuth } from '@/context/AuthContext';
 
 // Pages
 import NewLandingPage from '@/pages/NewLandingPage';
+import EllenPage from '@/pages/EllenPage';
 import LandingPage from '@/pages/LandingPage';
 import SignupPage from '@/pages/SignupPage';
 import LoginPage from '@/pages/LoginPage';
