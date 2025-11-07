@@ -242,14 +242,6 @@ export default function NewLandingPage() {
       </div>
 
       <Footer />
-
-      {/* Ellen Chat Overlay */}
-      <EllenChat 
-        isOpen={chatOpen} 
-        onClose={() => setChatOpen(false)} 
-        serviceType={selectedService}
-        onSignupPrompt={handleSignupPrompt}
-      />
     </div>
   );
 }
