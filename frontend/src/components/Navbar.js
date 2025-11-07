@@ -44,7 +44,7 @@ export default function Navbar() {
               className="text-[#667085] hover:text-[#0F4C81] font-medium transition-colors duration-200"
               data-testid="nav-advisor"
             >
-              AI Advisor
+              Talk to Ellen
             </Link>
             <Link
               to="/products"
