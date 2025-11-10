@@ -9,6 +9,33 @@ export default function ServiceDetailPage() {
   const { serviceId } = useParams();
 
   const serviceContent = {
+    'first-time-buyer': {
+      title: 'First-Time Buyer Program',
+      icon: Home,
+      overview: 'Buying your first home is an exciting milestone! Our First-Time Buyer Program offers special financing options, lower down payment requirements, and educational resources to guide you through every step of the home buying journey.',
+      benefits: [
+        'Down payments as low as 3% of purchase price',
+        'Special interest rates for first-time buyers',
+        'Access to down payment assistance programs',
+        'Step-by-step guidance from application to closing',
+        'Educational resources and homebuyer workshops',
+        'Flexible credit requirements and qualifying options'
+      ],
+      scenarios: [
+        {
+          question: 'What qualifies me as a first-time buyer?',
+          answer: 'Generally, you\'re considered a first-time buyer if you haven\'t owned a home in the past 3 years. Some programs may have different criteria, but we\'ll help you determine eligibility.'
+        },
+        {
+          question: 'How much do I need for a down payment?',
+          answer: 'With our First-Time Buyer Program, you can put down as little as 3% of the home price. We also connect you with down payment assistance programs that may cover some or all of your down payment.'
+        },
+        {
+          question: 'What if my credit isn\'t perfect?',
+          answer: 'That\'s okay! Many first-time buyer programs have flexible credit requirements. We\'ll work with you to find the best option for your situation and help you improve your credit if needed.'
+        }
+      ]
+    },
     purchase: {
       title: 'Purchase a New Home',
       icon: Home,
