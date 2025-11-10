@@ -292,11 +292,11 @@ export default function ServiceDetailPage() {
           </p>
           <Button
             size="lg"
-            onClick={() => navigate('/prechat', { state: { serviceType: serviceId } })}
+            onClick={() => navigate('/name-collection', { state: { serviceType: serviceId } })}
             className="bg-white text-[#0F4C81] hover:bg-[#F8F9FA] rounded-full px-12 text-lg h-16"
-            data-testid="cta-check-price"
+            data-testid="cta-get-started"
           >
-            Check Price
+            Get Started
           </Button>
         </div>
       </div>
