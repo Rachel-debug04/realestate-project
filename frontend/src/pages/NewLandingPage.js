@@ -9,34 +9,34 @@ export default function NewLandingPage() {
 
   const services = [
     { 
-      id: 'purchase', 
-      title: 'Purchase a New Home', 
+      id: 'first-time-buyer', 
+      title: 'First-Time Buyer Program', 
       icon: Home,
-      description: 'Finance your dream property with great rates'
+      description: 'Special programs designed for first-time homebuyers'
+    },
+    { 
+      id: 'government-backed', 
+      title: 'Government-Backed Loans', 
+      icon: Building,
+      description: 'FHA, VA, and USDA loan programs'
+    },
+    { 
+      id: 'jumbo-loans', 
+      title: 'Jumbo Loans', 
+      icon: TrendingUp,
+      description: 'Financing for luxury and high-value properties'
     },
     { 
       id: 'refinance', 
-      title: 'Refinance Mortgage', 
-      icon: TrendingUp,
-      description: 'Lower your rate or shorten your term'
-    },
-    { 
-      id: 'investment', 
-      title: 'Investment Property Loans', 
-      icon: Building,
-      description: 'Finance rental or investment properties'
-    },
-    { 
-      id: 'home-equity', 
-      title: 'Home Equity Loans', 
+      title: 'Refinance', 
       icon: DollarSign,
-      description: 'Leverage your home equity for cash'
+      description: 'Lower your rate or access home equity'
     },
     { 
-      id: 'calculator', 
-      title: 'Mortgage Calculator', 
+      id: 'credit-guidance', 
+      title: 'Credit & Financial Guidance', 
       icon: BarChart3,
-      description: 'Get quick rate estimates'
+      description: 'Improve your credit and financial health'
     },
     { 
       id: 'learn', 
