@@ -44,6 +44,7 @@ function App() {
           <Routes>
             <Route path="/" element={<NewLandingPage />} />
             <Route path="/services/:serviceId" element={<ServiceDetailPage />} />
+            <Route path="/name-collection" element={<NameCollectionPage />} />
             <Route path="/prechat" element={<PreChatFlow />} />
             <Route path="/ellen" element={<EllenPage />} />
             <Route path="/old" element={<LandingPage />} />
