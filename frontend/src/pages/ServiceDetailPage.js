@@ -36,6 +36,33 @@ export default function ServiceDetailPage() {
         }
       ]
     },
+    'government-backed': {
+      title: 'Government-Backed Loans',
+      icon: Building,
+      overview: 'Government-backed loans offer unique benefits for eligible buyers, including low or no down payment options, flexible credit requirements, and competitive interest rates. Explore FHA, VA, and USDA loan programs designed to make homeownership accessible.',
+      benefits: [
+        'FHA loans with as low as 3.5% down payment',
+        'VA loans with $0 down for eligible veterans and service members',
+        'USDA loans with $0 down for eligible rural properties',
+        'More flexible credit score requirements',
+        'Lower PMI costs or no PMI (VA loans)',
+        'Competitive interest rates backed by the government'
+      ],
+      scenarios: [
+        {
+          question: 'What\'s the difference between FHA, VA, and USDA loans?',
+          answer: 'FHA loans are for buyers with lower credit scores or down payments (3.5% minimum). VA loans are for veterans and military members with $0 down and no PMI. USDA loans are for rural properties with $0 down and income limits.'
+        },
+        {
+          question: 'Do I qualify for a VA loan?',
+          answer: 'VA loans are available to active duty service members, veterans, certain National Guard and Reserve members, and eligible surviving spouses. You\'ll need a Certificate of Eligibility (COE) which we can help you obtain.'
+        },
+        {
+          question: 'What are the income limits for USDA loans?',
+          answer: 'USDA income limits vary by location and household size. Generally, your household income must be at or below 115% of the median income for your area. We can help check eligibility for your specific location.'
+        }
+      ]
+    },
     purchase: {
       title: 'Purchase a New Home',
       icon: Home,
