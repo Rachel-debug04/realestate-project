@@ -58,17 +58,10 @@ export default function PreChatFlow() {
   const location = useLocation();
   const serviceType = location.state?.serviceType || 'purchase';
   
-  const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     firstName: '',
-    lastName: '',
-    street: '',
-    unit: '',
-    propertyType: '',
-    termsAccepted: false
+    lastName: ''
   });
-
-  const totalSteps = 5;
   const progress = (step / totalSteps) * 100;
 
   const getServiceTitle = () => {
