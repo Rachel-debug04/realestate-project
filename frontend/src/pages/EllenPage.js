@@ -151,8 +151,9 @@ export default function EllenPage() {
     }
   };
 
-  // Use scripted chat for first-time-buyer service
-  if (serviceType === 'first-time-buyer') {
+  // Use scripted chat for specific services
+  if (serviceType === 'first-time-buyer' || serviceType === 'government-backed') {
+    const ChatComponent = serviceType === 'first-time-buyer' ? FirstTimeBuyerChat : GovernmentBackedLoansChat;
     return (
       <div className="min-h-screen bg-gradient-to-b from-[#F8F9FA] to-white flex flex-col">
         {/* Header */}
