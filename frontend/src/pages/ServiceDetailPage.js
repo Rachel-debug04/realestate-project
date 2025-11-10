@@ -63,6 +63,33 @@ export default function ServiceDetailPage() {
         }
       ]
     },
+    'jumbo-loans': {
+      title: 'Jumbo Loans',
+      icon: TrendingUp,
+      overview: 'Jumbo loans are designed for high-value properties that exceed conforming loan limits. Perfect for luxury homes, high-cost areas, or investment properties, jumbo loans offer competitive rates with tailored terms for qualified borrowers.',
+      benefits: [
+        'Finance properties above $766,550 (2024 conforming limit)',
+        'Competitive rates for high-value purchases',
+        'Fixed and adjustable-rate options available',
+        'Flexible terms: 10, 15, 20, or 30-year mortgages',
+        'Finance primary residences, second homes, or investment properties',
+        'Customized solutions for high-net-worth individuals'
+      ],
+      scenarios: [
+        {
+          question: 'What credit score do I need for a jumbo loan?',
+          answer: 'Most lenders require a minimum credit score of 700 for jumbo loans, though some may accept 680 with compensating factors. Higher scores typically result in better rates and terms.'
+        },
+        {
+          question: 'How much down payment is required?',
+          answer: 'Jumbo loans typically require 10-20% down payment, depending on the property type and your financial profile. Primary residences may qualify with 10-15% down, while investment properties usually require 20-30%.'
+        },
+        {
+          question: 'What are the income and asset requirements?',
+          answer: 'Lenders look for stable, verifiable income and substantial liquid assets (typically 6-12 months of reserves). Self-employed borrowers may need additional documentation. Asset-based qualification options are also available.'
+        }
+      ]
+    },
     purchase: {
       title: 'Purchase a New Home',
       icon: Home,
