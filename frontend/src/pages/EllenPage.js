@@ -142,6 +142,80 @@ export default function EllenPage() {
     navigate('/signup', { state: { fromEllen: true, userData } });
   };
 
+  const handleLoginRequired = (action) => {
+    if (action === 'login') {
+      navigate('/login', { state: { returnTo: '/ellen', serviceType, userData } });
+    } else {
+      navigate('/signup', { state: { fromEllen: true, userData, returnTo: '/ellen' } });
+    }
+  };
+
+  // Use scripted chat for first-time-buyer service
+  if (serviceType === 'first-time-buyer') {
+    return (
+      <div className="min-h-screen bg-gradient-to-b from-[#F8F9FA] to-white flex flex-col">
+        {/* Header */}
+        <div className="bg-white border-b border-[#E5E7EB] sticky top-0 z-10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-between h-16">
+              <Button
+                variant="ghost"
+                onClick={() => navigate('/')}
+                className="flex items-center space-x-2 text-[#667085] hover:text-[#0F4C81]"
+                data-testid="back-to-home"
+              >
+                <ArrowLeft className="h-4 w-4" />
+                <span>Back</span>
+              </Button>
+              
+              <div className="flex items-center space-x-2">
+                <div className="w-10 h-10 bg-[#0F4C81] rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-xl">M</span>
+                </div>
+                <span className="text-xl font-bold text-[#0F4C81]" style={{ fontFamily: 'Space Grotesk' }}>
+                  MortsGage
+                </span>
+              </div>
+
+              <div className="flex items-center space-x-3">
+                <Button
+                  variant="ghost"
+                  onClick={() => navigate('/login')}
+                  className="text-[#0F4C81]"
+                >
+                  Log In
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Main Chat Area */}
+        <div className="flex-1 max-w-4xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col">
+          <div className="text-center mb-8 animate-fadeIn">
+            <img
+              src={ELLEN_AVATAR}
+              alt="Ellen"
+              className="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-[#A9CCE3] shadow-lg"
+            />
+            <h1 className="text-3xl font-bold text-[#0A1929] mb-2" style={{ fontFamily: 'Space Grotesk' }}>
+              Chat with Ellen
+            </h1>
+            <p className="text-[#667085]">Your friendly mortgage guide</p>
+          </div>
+
+          <div className="bg-white rounded-3xl shadow-lg border border-[#E5E7EB] flex-1 flex flex-col overflow-hidden">
+            <FirstTimeBuyerChat 
+              firstName={userData.firstName} 
+              onLoginRequired={handleLoginRequired}
+            />
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Default chat for other services
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#F8F9FA] to-white flex flex-col">
       {/* Header */}
