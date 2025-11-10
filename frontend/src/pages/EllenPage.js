@@ -207,7 +207,7 @@ export default function EllenPage() {
           </div>
 
           <div className="bg-white rounded-3xl shadow-lg border border-[#E5E7EB] flex-1 flex flex-col overflow-hidden">
-            <FirstTimeBuyerChat 
+            <ChatComponent 
               firstName={userData.firstName} 
               onLoginRequired={handleLoginRequired}
             />
